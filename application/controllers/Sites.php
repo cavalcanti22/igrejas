@@ -62,7 +62,7 @@ class Sites extends CI_Controller {
               // Pass the file name and post data to the insertImage model
 				$this->modeligrejas->insertIgreja($this->upload->data('file_name'),$this->input->post());
 				$_SESSION['feedback'] = '<div class="alert alert-success">IGREJA CADASTRADA COM SUCESSO! AGUARDE MODERAÇÃO PARA VISUALIZAR NO SITE.</div>';
-				redirect(base_url('sites/form'));
+				redirect(base_url('cadastro'));
 			}
 		}
 	}
