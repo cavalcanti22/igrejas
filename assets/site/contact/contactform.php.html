@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	<title>Contact us</title>
+	<style type="text/css">@import url("http://fonts.googleapis.com/css?family=PT+Sans");</style>
+	<style type="text/css">@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");</style>
+	<link rel="stylesheet" type="text/css" href="contact.css" />
+    <link href="http://ignitethemes.net/reverence/css/colors/default.css" rel="stylesheet" type="text/css" media="all" />
+	<script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+      
+</head>
+<body>
+
+<!-- Form Code Start -->
+<form id='contactus' action='/reverence/contact/contactform.php' method='post' accept-charset='UTF-8'>
+	<fieldset>
+		<input type='hidden' name='submitted' id='submitted' value='1'/>
+		<input type='hidden' name='ideeb622e38ad1733b2818' value='378affb55e330cb500a3639fc6643acd'/>
+		<input type='text'  class='spmhidip' name='spd3f70034dfd6ae8085f847625f94b101' />
+		<div><span class='error'></span></div>
+		<input type='text' name='name' id='name' value='Name' maxlength="50" onFocus="if(this.value=='Name')this.value='';" onBlur="if(this.value=='')this.value='Name';"/><br/>
+		<span id='contactus_name_errorloc' class='error'></span>
+		<input type='text' name='email' id='email' value='Email' maxlength="50" onFocus="if(this.value=='Email')this.value='';" onBlur="if(this.value=='')this.value='Email';"/><br/>
+		<textarea rows="10" cols="50" name='message' id='message'></textarea>
+        <input type='reset' name='Reset' value='Reset' class="button medium"/>
+		<input type='submit' name='Submit' value='Submit' class="button medium"/>
+	</fieldset>
+</form>
+<!-- client-side Form Validations:
+Uses the excellent form validation script from JavaScript-coder.com-->
+
+<script type='text/javascript'>
+// <![CDATA[
+
+    var frmvalidator  = new Validator("contactus");
+    frmvalidator.EnableOnPageErrorDisplay();
+    frmvalidator.EnableMsgsTogether();
+    frmvalidator.addValidation("name","req","Please provide your name");
+
+    frmvalidator.addValidation("email","req","Please provide your email address");
+
+    frmvalidator.addValidation("email","email","Please provide a valid email address");
+
+    frmvalidator.addValidation("message","maxlen=2048","The message is too long!(more than 2KB!)");
+
+// ]]>
+</script>
+
+</body>
+</html>

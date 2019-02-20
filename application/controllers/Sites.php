@@ -13,7 +13,7 @@ class Sites extends CI_Controller {
 
 
 	public function index(){
-
+  		$this->load->helper('funcoes');
 		$data['titulo'] 		= 'IGREJAS | BRASIL';
 		$data['view'] 			= 'sites/index';
 		$data['header1'] 		= $this->modelpaginas->getPagina(md5(1));
@@ -28,6 +28,7 @@ class Sites extends CI_Controller {
 		$data['contato']  		= $this->modelpaginas->getPagina(md5(10));
 		$data['igrejasTitulo']  = $this->modelpaginas->getPagina(md5(11));
 		$data['galeriaTitulo']  = $this->modelpaginas->getPagina(md5(12));
+		$data['lastIgrejas']    = $this->modelsites->getLastIgrejas();  
 		$data['imagens'] 		= $this->modelimagens->getAllImagens();
 		// $data['lastigrejas'] 	= $this->modelimagens->getLastIgrejas();
 

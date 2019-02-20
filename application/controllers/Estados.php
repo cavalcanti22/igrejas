@@ -10,7 +10,7 @@ class Estados extends CI_Controller {
 
   public function index($estado){
     $this->load->helper('funcoes');
-    $data['titulo']       = $estado;
+    $data['titulo']       = 'IGREJAS | '.$estado ;
     $data['view'] 	      = 'estados/index';
     $data['igrejas']      = $this->modelestados->listarestados($estado);
 

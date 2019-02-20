@@ -60,11 +60,13 @@
                             <td><?=$igreja->state?></td>
                             <td><?=$igreja->city?></td>
                             <td><?=$igreja->author?></td>
-                            <td> <?php 
-                              $tempo = $igreja->sentTime;
-                              $tempo = date("d-m-Y ");
-                              echo $tempo;
-                            ?></td>
+                           
+                            <td>
+                              <?php 
+                                $originalDate = $igreja->sentTime;
+                                echo $newDate = date("d-m-Y", strtotime($originalDate));
+                               ?>
+                             </td>
                             <td class="text-right">
                               <a href="<?=base_url()?>Igrejas/getOne/<?=md5($igreja->id)?>/<?=limpar($igreja->name) ?>" class="btn btn-simple btn-info btn-icon">
                                <i class="material-icons">visibility</i>

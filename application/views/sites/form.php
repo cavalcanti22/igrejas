@@ -1,4 +1,5 @@
-
+<div class="container">
+  
 <?php
 echo validation_errors('<div class="alert alert-danger">','</div>'); 
 echo form_open_multipart('sites/add');
@@ -71,10 +72,12 @@ echo form_open_multipart('sites/add');
   <textarea class="form-control" id="description" name="description" rows="3"></textarea>
 </div>
 <div class="form-group">
-  <button type="submit" name="submit" class="btn btn-primary">CADASTRAR</button>
+  <button type="submit" name="submit"class="button medium"">CADASTRAR</button>
 </div>
 </div>
 </form>
 
 
 
+
+</div>

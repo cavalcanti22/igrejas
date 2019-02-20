@@ -23,4 +23,22 @@ class Cidades_model extends CI_Model {
 	}
 
 
+
+	public function lastIgrejasByCites($city){
+		$this->db->from('igrejas');
+		$this->db->order_by('id',"DESC");
+		$this->db->where('city',$city);
+		$this->db->limit(3);
+		return $this->db->get()->result();
+	}
+
+
+	public function lastIgrejasByStates($state){
+		$this->db->from('igrejas');
+		$this->db->order_by('id',"DESC");
+		$this->db->where('state',$state);
+		$this->db->limit(3);
+		return $this->db->get()->result();
+	}
+
 }

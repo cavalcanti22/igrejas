@@ -10,7 +10,7 @@
                <div class="card card-login card-hidden">
                 <div class="card-header text-center">
                           <center>
-              <img src="<?=base_url()?>assets/site/images/unlock_animaiton.gif" style = "width: 40%">
+              <img src="<?=base_url()?>assets/images/unlock_animaiton.gif" style = "width: 40%">
           
         </center>
                     <h4 class="card-title"><?=$titulo; ?></h4>

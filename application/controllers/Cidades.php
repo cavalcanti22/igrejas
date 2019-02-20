@@ -8,12 +8,14 @@ class Cidades extends CI_Controller {
     $this->load->model('Cidades_model','modelcidades');
   }
 
-  public function index($id){
+  public function index($city,$id,$state){
     $this->load->helper('funcoes');
-  $data['titulo']       = 'Cidade';
-  $data['view']         = 'cidades/index';
-  $data['igreja']       = $this->modelcidades->getCidade($id);
-  $this->load->view('layouts/site',$data);
+    $data['titulo']       = 'IGREJAS | '.$city;
+    $data['view']         = 'cidades/index';
+    $data['igreja']       = $this->modelcidades->getCidade($id);
+    $data['lastigrejas']  = $this->modelcidades->lastIgrejasByCites($city);
+    $data['lastigrejasStates']  = $this->modelcidades->lastIgrejasByStates($state);
+    $this->load->view('layouts/site',$data);
   }
 }
 

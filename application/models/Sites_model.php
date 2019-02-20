@@ -9,6 +9,13 @@ class Sites_model extends CI_Model {
 		parent::__construct();
 	}
 
+	public function getLastIgrejas(){
+
+		$this->db->from('igrejas');
+		$this->db->order_by('md5(id)',"DESC");
+		$this->db->limit(10);
+		return $this->db->get()->result();
+	}
 
 
 	public function insertNotification($email){ 
@@ -18,4 +25,6 @@ class Sites_model extends CI_Model {
 
 		return $this->db->insert('mensagens', $data); 
 	}
+
+
 }
